@@ -25,8 +25,9 @@ p {
 }
 .logo {
   margin-bottom: 12px;
-  width: 100px;
-  height: auto;
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
 }
 .slider {
   position: relative;
@@ -65,7 +66,7 @@ p {
   flex-direction: column;
 }
 .landing p {
-  font-size: 22px;
+  font-size: 18px;
 }
 .landing__title {
   font-weight: 100;
@@ -79,6 +80,7 @@ p {
   position: relative;
   font-family: 'Montez', cursive;
   margin-right: 10px;
+  line-height: 0;
 }
 .btn {
   display: block;
@@ -160,6 +162,7 @@ p {
   color: #555;
 }
 .rsvp__input:focus {
+  border-color: #bbb;
   outline: 0;
   box-shadow: none;
 }
@@ -168,30 +171,29 @@ p {
   flex-direction: column;
   margin-bottom: 24px;
 }
+.rsvp__group select {
+  max-width: 120px;
+}
 .rsvp__checkboxes {
   display: flex;
   flex-direction: row;
 }
 .rsvp__checkbox {
-  background: #fcfcfc;
-  display: flex;
   flex: 1;
-  flex-direction: row-reverse;
-  justify-content: center;
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
   align-items: center;
-  border: 1px solid #e1e1e1;
-  border-radius: 2px;
-  height: 44px;
-  padding: 0 15px;
-  margin-right: 20px;
 }
 .rsvp__checkbox input {
-  display: none;
-  width: 16px;
-  height: 16px;
-  border: 1px solid #fcfcfc;
-  background: #fff;
   margin-right: 10px;
+}
+.rsvp__checkbox:first-child label {
+  border-radius: 2px 0 0 2px;
+  border-right: 0;
+}
+.rsvp__checkbox input:checked + label {
+  color: #555;
 }
 .confirm {
   padding: 20px;
