@@ -1,0 +1,51 @@
+extends layout
+block content
+  .landing
+    a(href="#video").top-link The proposal
+    img(src="/img/logo.jpg").logo
+    h2.landing__title Jason Corbett
+      br
+      span &amp;
+      | Gizela Tumbas
+    p Would love to see you at their wedding
+    a(href="#rsvp").btn RSVP
+  .modal#video
+    a(href="#home").back-button
+        i.icon-chevron-left.back__arrow
+        | Go back to the start
+    iframe(width="100%",height="320",src="//www.youtube.com/embed/C1RsOL61e64",frameborder="0",allowfullscreen)
+  .modal#rsvp
+    .rsvp
+      a(href="#home").back-button
+        i.icon-chevron-left.back__arrow
+        | Go back to the start
+      .slider
+        .slider__canvas
+          .slider__window
+            form#rsvp-form.rsvp__form
+              .rsvp__group
+                label.rsvp__label Your name
+                input(type="text").rsvp__input
+              .rsvp__group
+                label.rsvp__label No. of guests
+                select
+                  option + 1
+                  option + 2
+                  option + 3
+              .rsvp__group
+                label.rsvp__label Are you able to make it?
+                .rsvp__checkboxes
+                  label.rsvp__checkbox(for="yes") Yes
+                    input(type="radio", for="rsvp-form", id="yes",name="attendance")
+                  label.rsvp__checkbox(for="no") No
+                    input(type="radio", for="rsvp-form", id="no",name="attendance")
+              .rsvp__group 
+                button(type="submit", id="rsvp-submit").btn.btn--block Let us know
+          .slider__window.slider__window--confirm
+            .confirm
+              h2.confirm__title That's great news!
+              p We look forward to seeing you at the wedding.
+              h3 The ceremony
+              p We begin the day at Botanical Gardens in Brisbane City. The service will commence at 3:30 in the afternoon.
+              h4 The reception (the good bit)
+              p The day carries on at  
